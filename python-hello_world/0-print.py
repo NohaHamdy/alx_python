@@ -1,2 +1,2 @@
-#!C:\msys64\mingw64\bin\python3.exe
+#!/usr/bin/python3
 print('"Programming is like building a multilingual puzzle\n')
