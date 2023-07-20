@@ -19,6 +19,3 @@ def validate_password(password):
         return (True)
     else:
         return (False)
-    
-    
-print(validate_password("password123"))
