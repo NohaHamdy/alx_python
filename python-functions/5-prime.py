@@ -1,7 +1,5 @@
 def is_prime(number): 
-    if (number == 1):
-        return (True)
-    elif (number == 0):
+    if (number <= 1):
         return (False)
     else:
         for i in range (2,10):
