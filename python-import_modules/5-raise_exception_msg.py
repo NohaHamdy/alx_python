@@ -1,3 +1,4 @@
 def raise_exception_msg(message=""):
-    print(message.strip())
+    message = message.strip()
+    print(message)
     raise NameError("")
