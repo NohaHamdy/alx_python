@@ -1,4 +1,5 @@
 def raise_exception_msg(message=""):
-    message = message.strip()
-    print(message)
-    raise NameError("")
+    if message == "":
+        raise NameError("")
+    else:
+        print(message)
