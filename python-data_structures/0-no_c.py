@@ -6,5 +6,5 @@ def no_c(my_string):
             if i == 0:
                 new_str = my_string[1:]
             else:
-                new_str = my_string[:i] + my_string[i + 1:]      
+                new_str = new_str[:i] + new_str[i + 1:]      
     return new_str
