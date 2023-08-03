@@ -1,0 +1,1 @@
+This directory is for classes and objects project tasks
