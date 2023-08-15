@@ -3,7 +3,9 @@
 3-base_geometry module
 """
 class BaseGeometry:
-    """It is an empty class"""
+    """
+    An empty class 
+    """
     def __dir__(self):
         """
         Override the dir() method to exclude __init_subclass__ from the list of attributes for the instance.
@@ -13,7 +15,6 @@ class BaseGeometry:
         attributes = [attr for attr in attributes if attr != "__init_subclass__"]
         return attributes
 
-
 def class_dir(cls):
     """
     Override the dir() method to exclude __init_subclass__ from the list of attributes for the class.
@@ -22,7 +23,6 @@ def class_dir(cls):
     # Exclude __init_subclass__ from the list of attributes for the class
     attributes = [attr for attr in attributes if attr != "__init_subclass__"]
     return attributes
-
 
 if __name__ == "__main__":
     bg = BaseGeometry()
