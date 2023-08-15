@@ -1,31 +1,15 @@
 #!/usr/bin/python3
-"""
-3-base_geometry module
-"""
-class BaseGeometry:
-    """
-    An empty class 
-    """
-    def __dir__(self):
-        """
-        Override the dir() method to exclude __init_subclass__ from the list of attributes for the instance.
-        """
-        attributes = super().__dir__()
-        # Exclude __init_subclass__ from the list of attributes for the instance
-        attributes = [attr for attr in attributes if attr != "__init_subclass__"]
-        return attributes
+"""Defines an empty class BaseGeometry."""
+class baseGeo(type):
+    """The custom meta class"""
+    def __dir__(cls):
+        """override dir() method for meta class"""
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
 
-def class_dir(cls):
-    """
-    Override the dir() method to exclude __init_subclass__ from the list of attributes for the class.
-    """
-    attributes = super(cls).__dir__()
-    # Exclude __init_subclass__ from the list of attributes for the class
-    attributes = [attr for attr in attributes if attr != "__init_subclass__"]
-    return attributes
+class BaseGeometry(metaclass = baseGeo):
+    """BaseGeometry class with the custom metaclass"""
+    pass
 
-if __name__ == "__main__":
-    bg = BaseGeometry()
-    print(bg)
-    print(dir(bg))
-    print(class_dir(BaseGeometry()))
+    def __dir__(cls):
+        """Overrides dir() method for the metaclass"""
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
