@@ -2,15 +2,8 @@
 """ 
 It's a Python script that takes in a URL, sends a request to the URL ,and displays the value
 """
-
 import sys
-"""
-importing package of sys
-"""
 import requests
-"""
-importing package of  request 
-"""
 def get_x_request_id(url):
     """
     Method to get x_request
