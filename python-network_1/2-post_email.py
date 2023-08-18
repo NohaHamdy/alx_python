@@ -3,13 +3,7 @@
 It's a Python script that takes in a URL and an email address, sends a POST request
 """
 import sys
-"""
-Importing package of  sys 
-"""
 import requests
-"""
-importing package of request
-"""
 def send_post_request(url, email):
 
     data = {'email': email}
