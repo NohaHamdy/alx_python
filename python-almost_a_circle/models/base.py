@@ -1,11 +1,13 @@
-from .base import Base
+#!/usr/bin/python3
+"""Creating of the base class"""
+class Base:
+    """This is the base class"""
+    __nb_objects = 0
 
-class Derived(Base):
-    def __init__(self, id=None, name=None):
-        super().__init__(id)
-        self.name = name
-
-instance1 = Derived()
-instance2 = Derived()
-print(instance1.id)
-print(instance2.id)
+    def __init__(self, id = None):
+        """This is the Init method"""
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
