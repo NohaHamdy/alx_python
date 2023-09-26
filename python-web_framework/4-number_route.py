@@ -33,7 +33,7 @@ def task_4(n):
 def task_4_1(n):
     abort(404)
 
-# show if n is string
+# Display if n is string
 @app.route('/number/<string:n>', strict_slashes=False)
 def task_4_2(n):
     abort(404)
