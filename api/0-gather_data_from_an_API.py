@@ -1,5 +1,4 @@
-import requests
-import sys
+import requests, sys
 
 def  get_data(id):
     user_data_url = f'https://jsonplaceholder.typicode.com/users/{id}'
