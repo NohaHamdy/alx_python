@@ -1,4 +1,5 @@
 import requests
+
 import sys
 
 
@@ -7,6 +8,7 @@ def  get_data(id):
     user_data_url = f'https://jsonplaceholder.typicode.com/users/{id}'
     user_todos_url = f'https://jsonplaceholder.typicode.com/users/{id}/todos'
     output = 0
+
 
     user_data = requests.get(user_data_url)
     user_todo = requests.get(user_todos_url)
