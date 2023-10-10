@@ -1,4 +1,7 @@
-import requests, sys
+import requests
+import sys
+
+
 
 def  get_data(id):
     user_data_url = f'https://jsonplaceholder.typicode.com/users/{id}'
@@ -19,9 +22,11 @@ def  get_data(id):
             output += 1
             m.append(task["title"])
 
+
     print(f'Employee {emp_name} is done with tasks ({output}/{total_tasks}):')
     for task_title in m:
         print(f'\t{task_title}')
+
 
 if __name__ =='__main__':
     id = sys.argv[1]
