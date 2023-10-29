@@ -37,8 +37,8 @@ if __name__ =='__main__':
     '''
     
     
-import requests
 import json
+import requests
 
 # Define the REST API endpoints
 EMPLOYEE_DETAILS_ENDPOINT = "https://jsonplaceholder.typicode.com/users/{}"
