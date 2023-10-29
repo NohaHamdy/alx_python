@@ -47,4 +47,3 @@ employee_todo_list_progress = calculate_employee_todo_list_progress(employee_tod
 
 # Display the employee TODO list progress on the standard output
 display_employee_todo_list_progress(employee_details["name"], employee_todo_list_progress)
-  
