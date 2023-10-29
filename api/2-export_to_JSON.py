@@ -1,13 +1,15 @@
-"""This program fetches employee data and exports it to both CSV and JSON format
+"""
+This program fetches employee data and exports it to both CSV and JSON format
 
 """
 import csv, json, requests, sys
 
 def get_employee_data(employee_id):
-    # URL to fetch employee details
-    employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
     # URL to fetch employee TO DO list
     todos_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}/todos"
+    # URL to fetch employee details
+    employee_url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
+    
     
     try:
         # Fetch employee data
@@ -26,6 +28,7 @@ def get_employee_data(employee_id):
         print(f"Error: {e}")
         sys.exit(1)
 
+
 def export_to_csv(employee_id, employee_name, todos_data):
     csv_filename = f"{employee_id}.csv"
     
@@ -35,9 +38,11 @@ def export_to_csv(employee_id, employee_name, todos_data):
         # Write the CSV header
         csv_writer.writerow(["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"])
         
+        
         # Write the tasks data
         for todo in todos_data:
             csv_writer.writerow([employee_id, employee_name, todo["completed"], todo["title"]])
+
 
 def export_to_json(employee_id, employee_name, todos_data):
     json_filename = f"{employee_id}.json"
@@ -48,11 +53,13 @@ def export_to_json(employee_id, employee_name, todos_data):
                 "completed": todo["completed"],
                 "username": employee_name
             }
+            
             for todo in todos_data
         ]
     }
     with open(json_filename, "w") as json_file:
         json.dump(json_data, json_file)
+
 
 def main():
     if len(sys.argv) != 2:
